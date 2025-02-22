@@ -10,7 +10,7 @@ const Header = () => {
       <div className="container  flex justify-between items-center gap-4">
         <Logo />
         <nav className="md:flex  hidden">
-          <ul className="flex items-center gap-4 lg:gap-7">
+          <ul className="flex items-center  gap-4 lg:gap-7">
             {links.map((link) => (
               <LinkLi link={link} />
             ))}
