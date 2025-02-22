@@ -22,12 +22,12 @@ const Sidebar = () => {
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
         <div
-          className="border border-input cursor-pointer bg-background size-10 rounded-md grid place-items-center
+          className="border border-input cursor-pointer  bg-background size-10 rounded-md grid place-items-center
         ">
           <Menu className="size-6 " />
         </div>
       </SheetTrigger>
-      <SheetContent>
+      <SheetContent className="h-screen overflow-y-auto">
         <SheetHeader onClick={() => setOpen(!open)}>
           <SheetTitle>
             <Logo />
