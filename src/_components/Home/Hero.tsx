@@ -6,12 +6,18 @@ import SquareIcon from "../sharable/SquareIcon";
 
 const Hero = () => {
   return (
-    <div
+    <section
       style={{
-        height: "calc(100vh - 100px)",
+        minHeight: "calc(100vh - 100px)",
       }}
       className="mt-[100px] relative">
-      <BallAnimation x={"left-0"} y={"top-0"} w={"w-[200px]"} h={"h-[200px]"} />
+      <BallAnimation
+        blur="blur-3xl"
+        x={"left-0"}
+        y={"top-0"}
+        w={"w-[200px]"}
+        h={"h-[200px]"}
+      />
       <div className="container grid grid-cols-1 lg:grid-cols-5 gap-6">
         <HeroInfo />
         <div className="col-span-2 relative place-items-center lg:mt-[120px]">
@@ -35,7 +41,7 @@ const Hero = () => {
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

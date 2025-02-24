@@ -5,15 +5,17 @@ const BallAnimation = ({
   y,
   w,
   h,
+  blur,
 }: {
   x: string;
   y: string;
   w: string;
   h: string;
+  blur: string;
 }) => {
   return (
     <div
-      className={`absolute ${x} ${y} ${w} ${h}    opacity-20 blur-3xl  rounded-full bg-gradient-to-r from-primary to-transparent -z-20  `}
+      className={`absolute ${x} ${y} ${w} ${h}    opacity-20 ${blur}   rounded-full bg-gradient-to-r from-primary to-transparent z-10 `}
     />
   );
 };
