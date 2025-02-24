@@ -1,14 +1,16 @@
 import About from "@/_components/Home/About";
 import Hero from "@/_components/Home/Hero";
+import LatestPro from "@/_components/Home/LatestPro";
 import ServicrsHome from "@/_components/Home/ServicrsHome";
 
 export default function Home() {
   return (
     <main>
       <Hero />
-      <div className="space-y-10 md:space-y-14 mb-10 lg:space-y-20">
+      <div className="space-y-14 mb-10 lg:space-y-20">
         <About />
         <ServicrsHome />
+        <LatestPro />
       </div>
     </main>
   );

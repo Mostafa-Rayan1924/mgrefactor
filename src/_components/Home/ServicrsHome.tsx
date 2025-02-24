@@ -1,10 +1,12 @@
 import { services } from "@/constants/Services";
 import { servType } from "@/types/type";
 import BallAnimation from "../sharable/BallAnimation";
+import MainTitle from "../sharable/MainTitle";
 
 const ServicrsHome = () => {
   return (
     <section className="relative ">
+      <MainTitle title="خدماتنا" />
       <div className="container max-w-5xl">
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2  ">
           {services.map((service: servType, i: number) => (
