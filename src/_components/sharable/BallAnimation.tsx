@@ -15,7 +15,7 @@ const BallAnimation = ({
 }) => {
   return (
     <div
-      className={`absolute ${x} ${y} ${w} ${h}    opacity-20 ${blur}   rounded-full bg-gradient-to-r from-primary to-transparent z-10 `}
+      className={`absolute     opacity-20 ${blur}   rounded-full bg-gradient-to-r from-primary to-transparent ${x} ${y} ${w} ${h} -z-10 `}
     />
   );
 };

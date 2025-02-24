@@ -22,3 +22,7 @@ export interface Project {
   __v: number;
   imageCover: string;
 }
+export interface Faq {
+  question: string;
+  answer: string;
+}

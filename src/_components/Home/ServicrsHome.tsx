@@ -2,10 +2,23 @@ import { services } from "@/constants/Services";
 import { servType } from "@/types/type";
 import BallAnimation from "../sharable/BallAnimation";
 import MainTitle from "../sharable/MainTitle";
+import CircleIcon from "../sharable/CircleIcon";
 
 const ServicrsHome = () => {
   return (
     <section className="relative ">
+      <BallAnimation
+        blur="blur-2xl dark:blur-3xl"
+        x={"left-4"}
+        y={"top-0"}
+        w={"w-[200px] hidden lg:block"}
+        h={"h-[200px]"}
+      />
+      <CircleIcon
+        y={"bottom-4"}
+        x={"right-6 hidden lg:block"}
+        color={"text-primary"}
+      />
       <MainTitle title="خدماتنا" />
       <div className="container max-w-5xl">
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2  ">
