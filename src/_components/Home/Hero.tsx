@@ -7,10 +7,10 @@ import SquareIcon from "../sharable/SquareIcon";
 const Hero = () => {
   return (
     <section
-      style={{
-        minHeight: "calc(100vh - 100px)",
-      }}
-      className="mt-[100px] relative">
+      // style={{
+      //   minHeight: "calc(100vh - 100px)",
+      // }}
+      className="mt-[100px] min-h-screen  sm:min-h-[80vh] relative">
       <BallAnimation
         blur="blur-3xl"
         x={"left-0"}

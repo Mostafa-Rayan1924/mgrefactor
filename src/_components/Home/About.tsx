@@ -6,7 +6,7 @@ import BallAnimation from "../sharable/BallAnimation";
 
 const About = () => {
   return (
-    <section className="relative mt-6 sm:mt-0   ">
+    <section className="relative mt-6 sm:mt-0 ">
       <SquareIcon
         y={"-bottom-5"}
         x={"start-10 sm:start-40 animate-pulse"}
