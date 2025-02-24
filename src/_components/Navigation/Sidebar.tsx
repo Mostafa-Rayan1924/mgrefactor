@@ -57,7 +57,9 @@ const Sidebar = () => {
           </Link>
         </div>
         <SheetFooter>
-          <Socialmedia />
+          <div className="mt-8 sm:mt-10 mx-auto">
+            <Socialmedia size="size-9 sm:size-12 " />
+          </div>
         </SheetFooter>
       </SheetContent>
     </Sheet>

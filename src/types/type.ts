@@ -26,3 +26,9 @@ export interface Faq {
   question: string;
   answer: string;
 }
+export interface busInfo {
+  id: number;
+  title: string;
+  title2?: string;
+  icon: LucideIcon;
+}

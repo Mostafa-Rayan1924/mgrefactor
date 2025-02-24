@@ -3,6 +3,7 @@ import { Cairo } from "next/font/google";
 import "../app/globals.css";
 import Header from "@/_components/Navigation/Header";
 import { ThemeProvider } from "@/_components/Navigation/ThemeProvider";
+import Footer from "@/_components/sharable/Footer";
 
 export const metadata: Metadata = {
   title: "MG Company",
@@ -37,6 +38,7 @@ export default function RootLayout({
           disableTransitionOnChange>
           <Header />
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
