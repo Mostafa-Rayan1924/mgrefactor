@@ -3,6 +3,7 @@ import Faq from "@/_components/Home/Faq";
 import Hero from "@/_components/Home/Hero";
 import LatestPro from "@/_components/Home/LatestPro";
 import ServicrsHome from "@/_components/Home/ServicrsHome";
+import ContactForm from "@/_components/sharable/ContactForm";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         <ServicrsHome />
         <LatestPro />
         <Faq />
+        <ContactForm />
       </div>
     </main>
   );

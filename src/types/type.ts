@@ -43,3 +43,10 @@ export enum btns {
   "انشاءات بحريه" = "Marine-constructions",
   "انشاءات عامه" = "Public-constructions",
 }
+
+export interface ContactItem {
+  id: number;
+  icon: LucideIcon;
+  title: string;
+  desc: string;
+}
