@@ -16,7 +16,7 @@ const ProjectBox = ({ item }: { item: Project }) => {
       </div>
       <h2 className="flex items-center gap-2 ">
         <Building2Icon className="size-6 text-primary" />
-        {item.projectName}
+        <span className="line-clamp-1">{item.projectName}</span>
       </h2>
       <h2 className="text-muted-foreground flex items-center gap-2 ">
         <ChartBarStacked className="size-6 text-primary" />

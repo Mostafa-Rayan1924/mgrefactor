@@ -6,7 +6,7 @@ const page = async ({
 }: {
   searchParams: { category?: string };
 }) => {
-  const { category } = (await searchParams) || "All";
+  const category = searchParams.category || "All";
   return (
     <section className="mt-[140px!important] !mb-10 space-y-14  lg:space-y-20 container">
       <ImportantSec />
