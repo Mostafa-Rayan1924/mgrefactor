@@ -32,3 +32,9 @@ export interface busInfo {
   title2?: string;
   icon: LucideIcon;
 }
+export interface servPage {
+  id: number;
+  title: string;
+  desc: string;
+  img: string;
+}

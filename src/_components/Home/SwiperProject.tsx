@@ -15,6 +15,7 @@ import {
   ChartBarStacked,
 } from "lucide-react";
 import { Autoplay } from "swiper/modules";
+import Link from "next/link";
 // import required modules
 const SwiperProject = ({ data }: { data: Project[] }) => {
   const [swiper, setSwiper] = useState<SwiperCore | null>(null);
@@ -52,25 +53,30 @@ const SwiperProject = ({ data }: { data: Project[] }) => {
         {data.map((item, index) => (
           <SwiperSlide
             key={item._id}
-            className={`border border-border space-y-3 relative rounded-lg  p-4 ${
+            className={`border border-border  relative rounded-lg  p-4 ${
               activeIndex === index ? "opacity-100" : "opacity-30"
             }`}>
-            <div className="w-full  h-[250px] relative">
-              <Image
-                className="rounded-lg"
-                src={item.images[0]}
-                alt={item.projectName}
-                fill
-              />
-            </div>
-            <h2 className="flex items-center gap-2 ">
-              <Building2Icon className="size-6 text-primary" />
-              {item.projectName}
-            </h2>
-            <h2 className="text-muted-foreground flex items-center gap-2 ">
-              <ChartBarStacked className="size-6 text-primary" />
-              {item.section}
-            </h2>
+            <Link
+              className="space-y-3"
+              href={`/projects/${item._id}`}
+              key={item._id}>
+              <div className="w-full  h-[250px] relative">
+                <Image
+                  className="rounded-lg"
+                  src={item.images[0]}
+                  alt={item.projectName}
+                  fill
+                />
+              </div>
+              <h2 className="flex items-center gap-2 ">
+                <Building2Icon className="size-6 text-primary" />
+                {item.projectName}
+              </h2>
+              <h2 className="text-muted-foreground flex items-center gap-2 ">
+                <ChartBarStacked className="size-6 text-primary" />
+                {item.section}
+              </h2>
+            </Link>
           </SwiperSlide>
         ))}
       </Swiper>
