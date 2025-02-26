@@ -20,7 +20,7 @@ const page = async ({ params }: { params: Promise<{ id: string }> }) => {
     );
   }
   return (
-    <section className="mt-[140px] mb-40">
+    <section className="mt-[140px] mb-20">
       <div className="container grid grid-cols-1 lg:grid-cols-2 gap-4">
         {/* info side */}
         <div className="space-y-6 h-fit border border-border rounded-lg py-7 px-4">

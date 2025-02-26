@@ -1,6 +1,10 @@
-export async function getAllProjects() {
+export async function getAllProjects(category?: string) {
   try {
-    const res = await fetch(`${process.env.BASE_URL}project/`);
+    const res = await fetch(
+      `${process.env.BASE_URL}project/${
+        category ? `getProjectCat/${category}` : ""
+      }`
+    );
     if (!res.ok) {
       throw new Error(`HTTP error! Status: ${res.status}`);
     }

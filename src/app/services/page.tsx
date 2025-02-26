@@ -6,6 +6,7 @@ import { servicesPage } from "@/constants/ServicesPage";
 import { servPage } from "@/types/type";
 import { Rakkas } from "next/font/google";
 import Image from "next/image";
+import Link from "next/link";
 const font = Rakkas({
   subsets: ["latin"],
   weight: ["400"],
@@ -47,9 +48,9 @@ const page = () => {
                 <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                   {item.desc}
                 </p>
-                <Button className={buttonVariants({ size: "lg" })}>
+                <Link href={"/contact"} className={buttonVariants()}>
                   تواصل معنا
-                </Button>
+                </Link>
               </div>
               <div className="md:w-1/2 grid place-items-center">
                 <div className="relative size-[250px] sm:size-[350px] ">

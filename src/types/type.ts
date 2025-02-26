@@ -38,3 +38,8 @@ export interface servPage {
   desc: string;
   img: string;
 }
+export enum btns {
+  "الكل" = "",
+  "انشاءات بحريه" = "Marine-constructions",
+  "انشاءات عامه" = "Public-constructions",
+}
