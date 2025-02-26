@@ -3,7 +3,7 @@ import MainTitle from "../sharable/MainTitle";
 import ProjectBox from "../sharable/ProjectBox";
 import FilterBtn from "./FilterBtn";
 
-async function FilterProjects({ category }: { category: string | undefined }) {
+async function FilterProjects({ category }: { category: string }) {
   let { data: projectData } = await getAllProjects(category);
   if (!projectData?.result || !projectData?.result) {
     return (
