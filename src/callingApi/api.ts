@@ -6,11 +6,11 @@ export async function getAllProjects(category?: string) {
       }`
     );
     if (!res.ok) {
-      throw new Error(`HTTP error! Status: ${res.status}`);
+      throw new Error(`تعثر الحصول علي المشاريع! Status: ${res.status}`);
     }
     return await res.json();
   } catch (error) {
-    console.error("Failed to fetch projects:", error);
+    console.error("Failed to fetch projects:");
     return null;
   }
 }

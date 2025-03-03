@@ -1,12 +1,17 @@
+import About from "@/_components/Home/About";
 import ContactForm from "@/_components/sharable/ContactForm";
 import { Metadata } from "next";
+
 export const metadata: Metadata = {
-  title: "شركة إم جي | اتصل بنا",
+  title: "شركة إم جي | عنا",
   description: "شركة ام جي للمقاولات العامة واعمال البحر",
 };
 const page = () => {
   return (
-    <section className="mt-[140px] mb-10">
+    <section
+      style={{ marginTop: "140px" }}
+      className=" space-y-10 !mb-10 container">
+      <About />
       <ContactForm />
     </section>
   );

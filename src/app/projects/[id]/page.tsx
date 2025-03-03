@@ -8,7 +8,20 @@ import {
 } from "lucide-react";
 import SwiperCard from "./SwiperCard";
 import MainTitle from "@/_components/sharable/MainTitle";
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const res = await fetch(
+    `${process.env.BASE_URL}project/${(await params).id}`
+  );
+  const project = await res.json();
 
+  return {
+    title: project.data.result.projectName,
+  };
+}
 const page = async ({ params }: { params: Promise<{ id: string }> }) => {
   const id = (await params).id;
   let { data } = await getProjectById(id);

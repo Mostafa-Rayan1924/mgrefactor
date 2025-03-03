@@ -4,6 +4,7 @@ import SquareIcon from "@/_components/sharable/SquareIcon";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { servicesPage } from "@/constants/ServicesPage";
 import { servPage } from "@/types/type";
+import { Metadata } from "next";
 import { Rakkas } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
@@ -11,6 +12,10 @@ const font = Rakkas({
   subsets: ["latin"],
   weight: ["400"],
 });
+export const metadata: Metadata = {
+  title: "شركة إم جي | الخدمات",
+  description: "شركة ام جي للمقاولات العامة واعمال البحر",
+};
 const page = () => {
   return (
     <section className="mt-[100px]">

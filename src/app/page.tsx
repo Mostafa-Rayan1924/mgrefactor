@@ -4,7 +4,11 @@ import Hero from "@/_components/Home/Hero";
 import LatestPro from "@/_components/Home/LatestPro";
 import ServicrsHome from "@/_components/Home/ServicrsHome";
 import ContactForm from "@/_components/sharable/ContactForm";
-
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "شركة إم جي | الصفحة الرئيسية",
+  description: "شركة ام جي للمقاولات العامة واعمال البحر",
+};
 export default function Home() {
   return (
     <main>
