@@ -14,7 +14,7 @@ export async function generateMetadata({
   params: Promise<{ id: string }>;
 }) {
   const res = await fetch(
-    `${process.env.BASE_URL}project/${(await params).id}`
+    `${process.env.NEXT_PUBLIC_BASE_URL}project/${(await params).id}`
   );
   const project = await res.json();
 
@@ -25,6 +25,7 @@ export async function generateMetadata({
 const page = async ({ params }: { params: Promise<{ id: string }> }) => {
   const id = (await params).id;
   let { data } = await getProjectById(id);
+  console.log(data.result.projectName);
   if (!data || !data.result) {
     return (
       <p className="h-[80vh] flex items-center justify-center text-center text-3xl font-semibold text-red-500">

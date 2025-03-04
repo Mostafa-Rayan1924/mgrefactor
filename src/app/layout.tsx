@@ -4,6 +4,8 @@ import "../app/globals.css";
 import Header from "@/_components/Navigation/Header";
 import { ThemeProvider } from "@/_components/Navigation/ThemeProvider";
 import Footer from "@/_components/sharable/Footer";
+import ReduxProvider from "@/store/ReduxProvider";
+import { Toaster } from "react-hot-toast";
 
 export const metadata: Metadata = {
   title: "MG Company",
@@ -31,15 +33,18 @@ export default function RootLayout({
   return (
     <html lang="ar" className="scroll-smooth">
       <body className={`${font.className} overflow-x-hidden antialiased`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange>
-          <Header />
-          {children}
-          <Footer />
-        </ThemeProvider>
+        <ReduxProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange>
+            <Header />
+            {children}
+            <Footer />
+            <Toaster position="top-center" reverseOrder={false} />
+          </ThemeProvider>
+        </ReduxProvider>
       </body>
     </html>
   );
