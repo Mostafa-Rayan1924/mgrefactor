@@ -5,7 +5,7 @@ import FilterBtn from "./FilterBtn";
 
 async function FilterProjects({ category }: { category: string }) {
   let { data: projectData } = await getAllProjects(category);
-  if (!projectData) {
+  if (!projectData?.result) {
     return (
       <p className="text-center text-red-500">لا توجد مشاريع متاحة حاليًا</p>
     );
