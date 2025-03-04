@@ -19,9 +19,14 @@ const initialState: {
 } = {
   user: {
     token:
-      JSON.parse(localStorage.getItem("LoggedUser") as string)?.token || "",
+      typeof window !== "undefined"
+        ? JSON.parse(localStorage.getItem("LoggedUser") as string)?.token || ""
+        : "",
     userData:
-      JSON.parse(localStorage.getItem("LoggedUser") as string)?.userData || {},
+      typeof window !== "undefined"
+        ? JSON.parse(localStorage.getItem("LoggedUser") as string)?.userData ||
+          {}
+        : {},
   },
   loading: false,
   error: "",
@@ -64,7 +69,7 @@ export const loginSlice = createSlice({
           location: "",
         },
       };
-      localStorage.removeItem("LoggedUser");
+      typeof window !== "undefined" && localStorage.removeItem("LoggedUser");
     },
   },
   extraReducers: (builder) => {
@@ -76,7 +81,8 @@ export const loginSlice = createSlice({
       state.user = userLoggedInData;
       state.loading = false;
       toast.success("تم تسجيل الدخول بنجاح");
-      localStorage.setItem("LoggedUser", JSON.stringify(userLoggedInData));
+      typeof window !== "undefined" &&
+        localStorage.setItem("LoggedUser", JSON.stringify(userLoggedInData));
       setTimeout(() => {
         window.location.href = "/";
       }, 1500);
