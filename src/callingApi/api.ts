@@ -11,10 +11,10 @@ export async function getAllProjects(category?: string) {
     }
 
     const data = await res.json();
-    return data ?? []; // Ensure it's never null
+    return data ?? [];
   } catch (error) {
     console.error("Failed to fetch projects:", error);
-    return []; // Return empty array instead of null
+    return [];
   }
 }
 
@@ -28,9 +28,9 @@ export async function getProjectById(id: string) {
     }
 
     const data = await res.json();
-    return data ?? {}; // Ensure it's never null
+    return data ?? {};
   } catch (error) {
     console.error("Failed to fetch project:", error);
-    return {}; // Return an empty object instead of null
+    return {};
   }
 }

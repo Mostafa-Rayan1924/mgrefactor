@@ -11,8 +11,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "@/store/store";
 import { loginFunc } from "@/store/AuthSlice/loginSlice";
 import { Loader2 } from "lucide-react";
+import { useRouter } from "next/navigation";
 const LoginForm = () => {
-  let { loading } = useSelector((state: RootState) => state.loginSlice);
+  let { user, loading } = useSelector((state: RootState) => state.loginSlice);
+  let router = useRouter();
   let dispatch = useDispatch<AppDispatch>();
   const form = useForm<z.infer<typeof loginSchema>>({
     resolver: zodResolver(loginSchema),
@@ -32,7 +34,9 @@ const LoginForm = () => {
       form.reset();
     }
   }
-
+  if (user.token) {
+    router.push("/");
+  }
   return (
     <Form {...form}>
       <form
