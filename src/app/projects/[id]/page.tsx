@@ -26,7 +26,7 @@ const page = async ({ params }: { params: Promise<{ id: string }> }) => {
   const id = (await params).id;
   let { data } = await getProjectById(id);
   console.log(data.result.projectName);
-  if (!data || !data.result) {
+  if (!data) {
     return (
       <p className="h-[80vh] flex items-center justify-center text-center text-3xl font-semibold text-red-500">
         بحث خاطئ اعد المحاولة

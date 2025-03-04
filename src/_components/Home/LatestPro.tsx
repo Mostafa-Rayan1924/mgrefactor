@@ -4,7 +4,7 @@ import SwiperProject from "./SwiperProject";
 
 const LatestPro = async () => {
   let { data: projectData } = await getAllProjects();
-  if (!projectData?.result || !projectData?.result) {
+  if (!projectData) {
     return (
       <p className="text-center text-red-500">لا توجد مشاريع متاحة حاليًا</p>
     );
