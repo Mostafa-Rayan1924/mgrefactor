@@ -11,7 +11,7 @@ const page = () => {
     <section
       style={{ marginTop: "140px" }}
       className=" space-y-10 !mb-10 container">
-      <About />
+      <About show={false} />
       <ContactForm />
     </section>
   );

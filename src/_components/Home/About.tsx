@@ -4,7 +4,7 @@ import Link from "next/link";
 import CircleIcon from "../sharable/CircleIcon";
 import BallAnimation from "../sharable/BallAnimation";
 
-const About = () => {
+const About = ({ show }: { show?: boolean }) => {
   return (
     <section className="relative mt-6 sm:mt-0 ">
       <SquareIcon
@@ -19,7 +19,7 @@ const About = () => {
         w={"w-[200px]"}
         h={"h-[200px]"}
       />
-      <div className="container">
+      <div className="">
         <div className="max-w-[700px]  relative p-4 sm:p-6 mx-auto bg-background/90 border border-border rounded-lg">
           <CircleIcon y={"-top-5"} x={"end-0"} color={"text-primary"} />
           <div className="flex flex-col gap-y-4 text-start">
@@ -27,7 +27,10 @@ const About = () => {
             <h3 className="text-2xl font-bold text-foreground">
               تعرف اكثر عن اهدافنا
             </h3>
-            <p className=" text-muted-foreground line-clamp-4  leading-relaxed">
+            <p
+              className={`text-sm  sm:text-base text-muted-foreground ${
+                show && "line-clamp-4"
+              }   leading-relaxed`}>
               همتنا هي تحقيق رضا العملاء من خلال تحقيق أعلى مستوى من الخدمات
               عالية الجودة بأسعار عادلة ، كل ذلك بسبب الوقت المخطط والمراقب الذي
               تم تأريخه من قبل العميل. عمل قائم على القيمة لجميع أصحاب المصلحة
@@ -41,11 +44,15 @@ const About = () => {
               من خلال مستويات عالية من الاحتراف والالتزام بالجودة والسلامة
               والصحة والبيئة لكل من عملائنا وموظفينا.
             </p>
-            <div className="text-center ">
-              <Link href={`/about`} className={buttonVariants({ size: "lg" })}>
-                اقرأ اكثر
-              </Link>
-            </div>
+            {show && (
+              <div className="text-center ">
+                <Link
+                  href={`/about`}
+                  className={buttonVariants({ size: "lg" })}>
+                  اقرأ اكثر
+                </Link>
+              </div>
+            )}
           </div>
         </div>
       </div>

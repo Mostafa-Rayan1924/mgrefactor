@@ -14,7 +14,7 @@ export default function Home() {
     <main>
       <Hero />
       <div className="space-y-14 mb-10 lg:space-y-20">
-        <About />
+        <About show={true} />
         <ServicrsHome />
         <LatestPro />
         <Faq />
